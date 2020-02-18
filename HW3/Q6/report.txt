@@ -1,0 +1,1 @@
+Memory access with pointers are usually more efficient than subscripting through an array. This is because in compile time, sometimes at large values the compiler takes a while to convert the subscripts to exact memory locations. Having it already in pointer form gives the compiler one less step to access memory.

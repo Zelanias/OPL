@@ -1,0 +1,37 @@
+8.a
+	Python is an interpreted langauge because it does not compile the code and reads its straight down
+8.b
+	Arrays are set lists, with a fix number of items and of the same type
+		import array
+		arr = array('i', [1,2,3,4,5,6,7,8,9,10])
+	Lists are generic sequential data structure that stores in a "list". each element is given an idex. Uses []
+		genericName = ["test",3,3.1415,null]
+	Tuples are a sequence of immutable objects, uses () instead of []
+		genericTuple = (1,2,3,4,5)
+	Records are not directly supported in python
+
+
+8.c
+	[::-1} gives an invalid syntax error
+	if we did [::-1] on a list, it reverses the list
+	(as a string is a list in theory)
+	a = "abcdef"
+	a[::-1] prints -> "fedcba"
+8.d
+	import random
+	x = []
+	random.shuffle(x)
+8.e
+	both in core functionality does the exact same thing. both returns a list of integers.
+	However, a range returns a list while xrange returns an xrange object. This means that xrange creates the value with yielding, which works better for larger values. 
+8.f
+	numPy arrays provides ndarray, which allows the user to create any n dimensional arrays. 
+8.g
+	import array
+	genArray = array('i', [1,2,3,4,5,])
+	genArray.insert(1,10000)
+8.h
+	split is to create an array from a string, which seperates it at default spaces or with a custom split string.
+	a = "Hello world test woo"
+	a = a.splirt()
+	['Hello', 'world', 'test', 'woo']

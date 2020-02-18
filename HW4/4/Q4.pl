@@ -1,0 +1,1 @@
+delements(In,A):- length(X,3), append(X,Y,In),length(B,1),append(A,B,Y).

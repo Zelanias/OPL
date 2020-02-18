@@ -1,0 +1,1 @@
+The complexity of the nested one is a bit more difficult to read, while the one of notnested is similar to read through. Furthermore the reliablity depends on the language itself. Some languages have enclosures to ensure the nested ones, while others have to guess to the most recent one, making it different per language. 

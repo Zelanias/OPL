@@ -1,0 +1,1 @@
+reverseandappendlist(X,Y):-reverse(X,A),append(X,A,Y).
