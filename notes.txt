@@ -1,0 +1,211 @@
+LANG chp 6
+Data type - defines a collectin of data values and set off predefined operations
+	can not be defined in other terms - primative
+	descriptor are the properties of the variable.
+STATIC
+	descriptors are required at COMPILE time
+Dynamic
+	During EXECUTION
+Integer
+	Java - SIGNED byte short int long
+	Others have unsigned 
+	Python - Long integer, unlimted length
+Floating points are only aproximations
+	Fractions and exponent
+Complex data type, fortran and python
+	Ordered pair of floating point values
+	Python
+		complex literal is specificed with J
+Decimal data type
+	business data processing
+	BCD binaryu coded decimal
+	1 digit or 2 per byte
+		takes up more storage then binary representation
+Boolean
+	single bit but is usually in a single byte
+	C89 numeric expressions can use as conditionals
+	C99 and C++ allow numeric 
+Character types
+	chars are cstored as ascii, numeric coding
+	8 bit - 128 chars 
+	16 bit unicode 
+	4 byte - UCS-4 UTF -32
+String
+	Assignment
+	cat
+	slice
+	comp
+	pattern matching
+	usually stored in array of single hars
+	c/c++ uses arrays
+	java string is primative
+	Python has it as a primative type and has operations
+	Length options
+		Static length string
+		varying lengths - varying length with fixed maximum, as variable's definition. LImited dynamic length strings
+		Varying length with no maximum - Dynamic length strings
+	Static string - length - address 
+	Limited DYnamic string - Max length - current length - address
+		C/C++ do not require run time descriptor
+	Dynamic string - run time descriptor
+		requires more complex storage management
+Ordinal type - can be associated with set of positive integers
+	integer char boolean
+Enum type - all possible values are named constants are provied by user
+	c++: enum colors{red,blue,green,yellow,black}
+	readability and reliablity
+Record
+	Element defined by names, accessed through offsets
+	c struct
+	python/ruby hashes
+	Elliptical references, fields can be omitted
+Tuple
+	elements are not named
+	python immutable
+List
+	Elements can be any data type
+Union
+	variables store different type values at different times
+	no language support for type checking is free unions
+	with a type indicator is called Discriminated
+Heap dynamic variable, variable that are dynamically allocated from heap
+Dangling pointer reference - pointer that contains address of a heap dynamic variable that has been deallocated
+	Solution, reference tomb stone
+		Extra heap cell that is a pointer to the data
+		Pointer -> tombstome -> variable
+	Locks and keys
+		Pointer values are represented as (Key, address) pairs
+		Only gets value when lock and key are same, if variable is deallocated lock value is modified
+Lost Heap-Hynamic Variable - allocated heap hynamic variable that is no longer accessible. 
+Heap management
+	Reference counter
+		Counter that counts references
+		if 0, deallocate variable - becomes garbage
+	Mark-sweep
+		All cells are set to indicate as garbage
+		Every pointer is traced into the heap, all reachable cells are marked as not garbage
+		All cells that have not been marked are garbage
+Array 
+	homogenous aggregate of data elements
+	aggregate name and subscripts
+	finite mappings
+	perl can do negative subscript
+	range checking
+		Java ML C# does
+		Others dont
+	5 categories based on range binding and storage binding
+		static array 
+			range and storage is static
+			no dynamic allocation or deallocation
+			storage is fixed
+		fixed stack dynamic array
+			range is static, allocation is done during execution
+			space efficiency
+			allocation and deallocation time is slower
+		stack dynamic
+			range and storage are dynamically bound then remain fixed during lifetime of variable
+			Flexiable. 
+		fied heap dynamic
+			both are fixed after allocatoin
+			DIFFERENCE is that when user requests them during execution, storage is allocated from heap, not stack
+			Flexiblity, array size always fits the problem.
+			Allocation time for heap is longer then stack.
+		heap dynamic
+			ranges and storage is dynamic, can change any number of times in aray lifetime
+			Arrays can grow and strink
+			allocation and deallocation takes longer
+	Assignment, cat, comp
+Associative Array
+	Unordered collection, indexed by keys
+	perl -> hashes, %
+
+_______________________________________________________________________________________
+Names, binding, scoping
+______________________________-
+Logical programming
+They are declarative not procedual
+	only the specifications of desired results are stated
+Proposition logical statement that might be true of  false
+Symbolic logic can be used to make formal logic
+	express propositions
+	express relationships between propositions
+	decsribe how new propositions can be inferred
+First order predicate calculus 
+Constant represents an object
+Variable is a symbol that represent different objects at different times
+Simpilist is atomic proposition, consist of compound terms
+	Compound term is composed of two parts
+		functor
+			functino sumbol that names the relation
+		ordered list of parameters
+Predicate calculus and proving theorems,
+Arithmetic 
+	IS operator in prolog
+	All variables must already be instantiated
+	Left side cannot be previously instantiated
+________________
+Fundamental abstraction fallacies
+Process abstraction 
+Parameters in subprogram headers - formal parmeters
+Functino declaration
+Fucntino return type
+Fcuntino prototype/definition
+	Paremeters should match 
+	Parameter matching is basec on position/order
+	OR keyword parameter
+		any order but need to know the name of the parameters
+	default parameters are at the end 
+Some langauges allows variable number of parameters
+	c# params int[] list
+		can pass a list
+		or pass an arbitrary amoutn of sepearte parameters 
+		Python *args and **kwargs(key and value? like passing a dictionary to a fcuntion)
+		def gaoewjaiwe(arg1, *argv)	
+_______________________________________________
+C uses pass by value. 
+	parameters that are subprograms
+	3 types
+		shallow binding
+			enviorment of the call statement
+		deep binding
+
+		ad hoc binding
+	Pointer to function
+Overloding parameters
+	if having one with default and one without any ther is ambiguity
+Coroutines
+
+
+________________________________________________
+Abstractions, data abstraction, encapsulation construct
+	Functino/Classes can be a way of abstraction
+	Only able to view most significant attributes
+Data abstraction
+	2 types:
+	Data representation
+	Subprograms
+	2 conditions:
+	Syntatic unit
+	Declaration of the type
+Advantages:
+	It improvres reliability of a program, but making its contents hidden/immutable
+	Reducing rang eof code and number of variables
+	making name conflicts lessl ikely
+	indirect access to hidden data
+Struct doesnt have any functions, only data. 
+Encapsulation
+	Data members
+	menber functions
+	All instances share single set of functions
+	own sets of data members
+Class instances: static, stack dynamic, heap dynamic
+	Static:
+		Allocate memory before runtime, @compile time?
+			Cannot have recursion with static 
+	Stack dynamic:
+		Allocate at call on the stack, can have multiple memory location
+	Heap Dynamic:
+		Allocate on the heap, explicitly request to allocate at run time, and deallocation
+Inheritance:
+	Class can be derived from existing class
+	
